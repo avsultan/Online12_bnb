@@ -20,7 +20,7 @@ import cucumber.api.junit.Cucumber;
 			tags="@temp",
 			features= {"src/test/resources/com/bnb/features"}, 
 			glue= {"com/bnb/stepDefs"}
-		//	,dryRun = true
+			//,dryRun = true
 			)
 	public class CukesRunner {
 

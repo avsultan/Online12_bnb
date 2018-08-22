@@ -13,7 +13,7 @@ public class SchedulePage {
 	}
 	
 	@FindBy(tagName = "h1")
-	public WebElement scheduleTitle;
+	public WebElement title;
 	
 	@FindBy(xpath = "//td[@class='conference ng-star-inserted']")
 	public WebElement reservedRoom2;
@@ -31,5 +31,10 @@ public class SchedulePage {
 	
 	public WebElement cancelText(String str) {
 		return Driver.getDriver().findElement(By.xpath("//*[.='conference in "+str+" has been canceled']"));
+	}
+	
+	//h2[.='John Dillinger']
+	public String getFullName(String str) {
+		return Driver.getDriver().findElement(By.xpath("//h2[.='"+str+"']")).getText();
 	}
 }

@@ -78,7 +78,7 @@ public class SmokeTestStepDefs {
 	@Then("User should see user's schedule")
 	public void user_should_see_user_s_schedule() {
 	
-	assertTrue(schedulePage.scheduleTitle.isDisplayed());
+	assertTrue(schedulePage.title.isDisplayed());
 	BrowserUtils.waitFor(1);
 	}
 

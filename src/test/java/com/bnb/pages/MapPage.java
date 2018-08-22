@@ -2,6 +2,7 @@ package com.bnb.pages;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -28,5 +29,11 @@ public class MapPage {
 	
 	@FindBy(xpath="//div[@class='container']/h2")
 	public WebElement darkSideSubTitleText;
+	
+	public WebElement goToRoom(String str) {
+		return Driver.getDriver().findElement(By.xpath("//span[.='"+str+"']"));
+		
+		
+	}
 
 }

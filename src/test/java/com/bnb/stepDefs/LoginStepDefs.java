@@ -24,7 +24,7 @@ public class LoginStepDefs {
 	static LoginPage loginPage = new LoginPage();
 	static MapPage mapPage = new MapPage();
 	
-	public static void signOut() {
+	public void signOut() {
 		BrowserUtils.hover(mapPage.myNavBar);
 		BrowserUtils.waitFor(2);
 		mapPage.signOutButton.click();

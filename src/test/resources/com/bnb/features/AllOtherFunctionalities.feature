@@ -1,6 +1,4 @@
-@temp
 Feature: Test functionalities of the website 
-
 
 
 Background: 
@@ -17,9 +15,9 @@ Scenario: Cancel functionality
 	
 	
 	
-Scenario: Negative hunt functionality 
+Scenario: Hunt functionality (Negative) 
 	And User goes to hunt page and selects "25" and time from "8:00am" to "9:00am" 
-	And user click on search button and books the room
+	And user click on search button and books the room 
 	When user goes back to hunt page 
 	And user chooses same date and time and click on search button 
 	Then "you already have a conference for 2018-08-25." message should be displayed 

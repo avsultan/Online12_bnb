@@ -74,6 +74,7 @@ public class ScheduleRoomstepDef {
 	    Select select1 = new Select(huntPage.timeLineStart);
 	    Select select2 = new Select(huntPage.timeLineFinish);
 	    
+	    huntPage.date.sendKeys( (targetNumber+ emptyDate) + "");
 	    select1.selectByIndex(timeFromIndex);
 	    select2.selectByIndex(timeTillIndex);
 	    

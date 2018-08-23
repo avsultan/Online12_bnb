@@ -14,7 +14,7 @@ Scenario Outline: Verify schedule of the rooms visibility
 		|meru         |
 		
 		
-		@temp
+		#@temp
 		Scenario Outline: Verify personal schedule 
 			
 			Given User loges in using username "<email>" and password "<password>" 

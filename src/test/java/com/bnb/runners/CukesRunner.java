@@ -10,25 +10,25 @@ import cucumber.api.junit.Cucumber;
 	
 	@RunWith(Cucumber.class)
 	@CucumberOptions(
-			plugin = {
+			/*plugin = {
 					"pretty",
 					"html:target/default-cucumber-reports", //generates every time we run the cukes runner
 					"json:target/cucumber.json"
 			
-			},
+			},*/
 			
 			tags="@temp",
 			features= {"src/test/resources/com/bnb/features"}, 
 			glue= {"com/bnb/stepDefs"}
-			//,dryRun = true
+//			,dryRun = true
 			)
 	public class CukesRunner {
 
-//		@AfterClass
-//		public static void tearDown() {
-//			if(Driver.getDriver() != null)
-//				Driver.getDriver().close();
-//		}
+		@AfterClass
+		public static void tearDown() {
+			if(Driver.getDriver() != null)
+				Driver.getDriver().close();
+		}
 		
 		
 	}

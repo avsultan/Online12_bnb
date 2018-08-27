@@ -17,8 +17,11 @@ public class DBUtils {
 	
 	public static void main(String[] args) {
 		createConnection();
-		String query= "select * from users where team_id=38;";
-		System.out.println(getColumnData(query, "firstname"));
+		String query= "select firstname||' '||lastname, role, name, batch_number, c.location from users u\r\n" + 
+				"join team t on u.team_id = t.id\r\n" + 
+				"join campus c on t.campus_id = c.id\r\n" + 
+				"where email='emaynell8f@google.es';";
+		System.out.println(getQueryResultList(query).toString().replaceAll("[^0-9a-zA-Z, -]", ""));
 		
 		destroy();
 	}
@@ -129,15 +132,15 @@ public class DBUtils {
 	 * @param column
 	 * @return list of values of a single column from the result set
 	 */
-	public static List<Object> getColumnData(String query, String column) {
+	public static List<String> getColumnData(String query, String column) {
 		executeQuery(query);
-		List<Object> rowList = new ArrayList<>();
+		List<String> rowList = new ArrayList<>();
 		ResultSetMetaData rsmd;
 
 		try {
 			rsmd = resultSet.getMetaData();
 			while (resultSet.next()) {
-				rowList.add(resultSet.getObject(column));
+				rowList.add(resultSet.getString(column));
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

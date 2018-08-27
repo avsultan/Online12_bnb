@@ -32,18 +32,6 @@ public class ScheduleRoomstepDef {
     int timeTillIndex = 1;
     int emptyDate;
 	
-	@Given("user logs in with valid credentials")
-	public void user_logs_in_with_valid_credentials() {
-		loginPage.emailInputBox.sendKeys(ConfigurationReader.getProperty("qa_huntwebsite_valid_username"));
-		loginPage.passwordInputBox.sendKeys(ConfigurationReader.getProperty("qa_huntwebsite_valid_password"));
-		loginPage.signInButton.click();
-		
-	}
-	@When("user clicks on {string}")
-	public void user_clicks_on(String roomName) {
-		mapPage.goToRoom(roomName).click();
-
-	}
 	@When("user verfies empty date and time on the schedule")
 	public void user_verfies_empty_date_and_time_on_the_schedule() {
 		String elClass =  "conference";

@@ -30,6 +30,12 @@ public class MapPage {
 	@FindBy(xpath="//div[@class='container']/h2")
 	public WebElement darkSideSubTitleText;
 	
+	@FindBy(xpath="//a[.='self']")
+	public WebElement self;
+	
+	@FindBy(xpath="//a[.='team']")
+	public WebElement team;
+	
 	public WebElement goToRoom(String str) {
 		return Driver.getDriver().findElement(By.xpath("//span[.='"+str+"']"));
 		

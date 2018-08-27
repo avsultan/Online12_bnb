@@ -26,7 +26,7 @@ public class LoginStepDefs {
 	
 	public void signOut() {
 		BrowserUtils.hover(mapPage.myNavBar);
-		BrowserUtils.waitFor(2);
+		BrowserUtils.waitFor(1);
 		mapPage.signOutButton.click();
 	}
 	
@@ -40,6 +40,7 @@ public class LoginStepDefs {
 	    loginPage.emailInputBox.sendKeys(username);
 	    loginPage.passwordInputBox.sendKeys(password);
 	    loginPage.signInButton.click();
+	    BrowserUtils.waitFor(1);
 	}
 	
 	@Then("user should see map and following links")

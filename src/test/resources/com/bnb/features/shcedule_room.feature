@@ -1,6 +1,6 @@
 Feature: Test Scheduling Process 
 
-@temp
+
 Scenario Outline: Verify Empty schedule
 
 Given user logs in with valid credentials

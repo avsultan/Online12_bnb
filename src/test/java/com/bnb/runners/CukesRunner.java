@@ -10,12 +10,12 @@ import cucumber.api.junit.Cucumber;
 	
 	@RunWith(Cucumber.class)
 	@CucumberOptions(
-			/*plugin = {
+			plugin = {
 					"pretty",
 					"html:target/default-cucumber-reports", //generates every time we run the cukes runner
 					"json:target/cucumber.json"
 			
-			},*/
+			},
 			
 			tags="@temp",
 			features= {"src/test/resources/com/bnb/features"}, 

@@ -1,6 +1,5 @@
 Feature: Smoke Test 
-
-
+@smoke
 Scenario Outline:  Smoke Test
 	Given User logs in as a teacher with user name "teachervamikemarcus@gmail.com" and password "mikemarcus" 
 #	And   User clicks on  "<room>" and check for empty spot 

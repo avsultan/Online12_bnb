@@ -14,7 +14,6 @@ import cucumber.api.junit.Cucumber;
 					"pretty",
 					"html:target/default-cucumber-reports", //generates every time we run the cukes runner
 					"json:target/cucumber.json"
-			
 			},
 			
 			tags="@temp",
